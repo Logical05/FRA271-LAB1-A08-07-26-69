@@ -142,7 +142,7 @@ void UsageFault_Handler(void)
 /**
   * @brief This function handles System service call via SWI instruction.
   */
-void SVC_Handler(void)
+__attribute__((weak)) void SVC_Handler(void)
 {
   /* USER CODE BEGIN SVCall_IRQn 0 */
 
@@ -168,7 +168,7 @@ void DebugMon_Handler(void)
 /**
   * @brief This function handles Pendable request for system service.
   */
-void PendSV_Handler(void)
+__attribute__((weak)) void PendSV_Handler(void)
 {
   /* USER CODE BEGIN PendSV_IRQn 0 */
 
@@ -181,7 +181,7 @@ void PendSV_Handler(void)
 /**
   * @brief This function handles System tick timer.
   */
-void SysTick_Handler(void)
+__attribute__((weak)) void SysTick_Handler(void)
 {
   /* USER CODE BEGIN SysTick_IRQn 0 */
 
@@ -202,7 +202,7 @@ void SysTick_Handler(void)
 /**
   * @brief This function handles DMA1 channel1 global interrupt.
   */
-void DMA1_Channel1_IRQHandler(void)
+__attribute__((weak)) void DMA1_Channel1_IRQHandler(void)
 {
   /* USER CODE BEGIN DMA1_Channel1_IRQn 0 */
 
@@ -229,7 +229,7 @@ void TIM2_IRQHandler(void)
 /**
   * @brief This function handles EXTI line[15:10] interrupts.
   */
-void EXTI15_10_IRQHandler(void)
+__attribute__((weak)) void EXTI15_10_IRQHandler(void)
 {
   /* USER CODE BEGIN EXTI15_10_IRQn 0 */
 

@@ -1,9 +1,9 @@
-config load "D:\Fibo\Year3\TA_RMX\FRA271_Lab1_Sensors\Encoder_reader\Encoder_reader.ioc"
+config load "D:\University\RMX\LAB\FRA271-LAB1-A08-07-26-69\Encoder_reader\Encoder_reader.ioc"
 project toolchain STM32CubeIDE
 
 SetStructure Advanced
 
-project setCustomFWPath "C:\Users\User\STM32Cube\Repository\STM32Cube_FW_G4_V1.5.0"
+project setCustomFWPath "C:\Users\rajap\STM32Cube\Repository\STM32Cube_FW_G4_V1.6.0"
 
 project generate 
 

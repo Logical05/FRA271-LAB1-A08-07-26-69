@@ -1,0 +1,10 @@
+config load "D:\University\RMX\LAB\FRA271-LAB1-A08-07-26-69\Lab_1.2\Encoder_X1\Encoder_reader\Encoder_reader.ioc"
+project toolchain STM32CubeIDE
+
+SetStructure Advanced
+
+project setCustomFWPath "C:\Users\rajap\STM32Cube\Repository\STM32Cube_FW_G4_V1.6.0"
+
+project generate 
+
+exit wait

@@ -247,7 +247,7 @@ void MX_TIM3_Init(void)
   /* USER CODE END TIM3_Init 1 */
   TIM_InitStruct.Prescaler = 0;
   TIM_InitStruct.CounterMode = LL_TIM_COUNTERMODE_UP;
-  TIM_InitStruct.Autoreload = 61439;
+  TIM_InitStruct.Autoreload = 96;
   TIM_InitStruct.ClockDivision = LL_TIM_CLOCKDIVISION_DIV1;
   LL_TIM_Init(TIM3, &TIM_InitStruct);
   LL_TIM_DisableARRPreload(TIM3);
@@ -293,6 +293,7 @@ void MX_DMA_Init(void)
   */
 void MX_GPIO_Init(void)
 {
+  LL_GPIO_InitTypeDef GPIO_InitStruct = {0};
   /* USER CODE BEGIN MX_GPIO_Init_1 */
 
   /* USER CODE END MX_GPIO_Init_1 */
@@ -302,6 +303,12 @@ void MX_GPIO_Init(void)
   LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_GPIOF);
   LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_GPIOA);
   LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_GPIOB);
+
+  /**/
+  GPIO_InitStruct.Pin = LL_GPIO_PIN_13;
+  GPIO_InitStruct.Mode = LL_GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
+  LL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
 
@@ -364,3 +371,5 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
+
+/*SimulinkGeneratedCode*/
